@@ -4,24 +4,26 @@ this.author = author;
 this.year = year;
 this.genre = genre;
 this.addBook = function(){
-    //Constructing the header of the cards
+
+    //Building the header of the cards
     const bookName = document.createElement('h2')
     bookName.innerHTML = this.name
     const BookAuthor = document.createElement('h3')
     BookAuthor.innerHTML = this.author
     const header = document.createElement('header')
     header.appendChild(bookName)
-    header.appendChild(BookAuthor) 
-    //Constructing the footer of the cards
+    header.appendChild(BookAuthor)
+
+    //Building the footer of the cards
     const bookYear = document.createElement('span')
     bookYear.innerHTML = this.year
     const bookGenre = document.createElement('span')
     bookGenre.innerHTML = this.genre
     const footer = document.createElement('footer')
-    footer.appendChild(bookYear)
     footer.appendChild(bookGenre)
+    footer.appendChild(bookYear)
 
-
+    //Building the card
     const wrapper = document.querySelector('.wrapper')
     const newBook = document.createElement('article')
     newBook.classList.add('card')
